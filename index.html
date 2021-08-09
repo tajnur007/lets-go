@@ -11,10 +11,10 @@
 
 <body>
     <header>
-        <nav>
+        <div class="nav">
             <div class="company-title">Let's Go</div>
             <div class="toggle"></div>
-        </nav>
+        </div>
     </header>
 
     <main>
@@ -44,14 +44,29 @@
     </main>
 
     <footer>
-        <div class="social">
-            <ul>
+        <div>
+            <ul class="social">
                 <li><a href="#"><img src="resources/icons/facebook.png" alt=""></a></li>
                 <li><a href="#"><img src="resources/icons/twitter.png" alt=""></a></li>
                 <li><a href="#"><img src="resources/icons/instagram.png" alt=""></a></li>
             </ul>
         </div>
     </footer>
+
+    <!-- JavaScript Section  -->
+    <script>
+        const menuToggleIcon = document.querySelector('.toggle');
+        const menuToggle = document.querySelector('.menu');
+        const navToggle = document.querySelector('.nav');
+        const mainToggle = document.querySelector('.main');
+
+        menuToggleIcon.addEventListener('click', () => {
+            menuToggleIcon.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            mainToggle.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,168 @@
+/* Poppins Font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;800&display=swap');
+
+
+/* Custom Varables  */
+:root {
+    --overlay-color: #03a9f4;
+}
+
+
+/* Utility Styles  */
+* {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+
+/* Navbar Styles  */
+.nav {
+    padding: 1% 2%;
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: 0.5s;
+}
+.nav.active {
+    width: 71%;
+}
+.company-title {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(resources/icons/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(.6);
+    cursor: pointer;
+    z-index: 3;
+}
+.toggle.active {
+    background: url(resources/icons/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(.6);
+    /* z-index: 10; */
+}
+
+/* Main Section Styles  */
+.main {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    transition: 0.5s;
+}
+.main.active {
+    width: 75%;
+}
+.main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .8;
+}
+.menu.active {
+    position: absolute;
+    top: 0;
+    left:auto;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu a {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+.menu a:hover {
+    color: var(--overlay-color);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    mix-blend-mode: overlay;
+}
+.text {
+    padding-left: 9%;
+    width: 50%;
+    z-index: 4;
+}
+.text h2 {
+    font-size: 4em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.text h3 {
+    font-size: 2.5em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.text p {
+    padding: 15px 0px;
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+}
+.btn {
+    padding: 5px 20px;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: .5s;
+}
+.btn:hover {
+    letter-spacing: 5px;
+}
+
+/* Footer Section Styles  */
+.social {
+    position: absolute;
+    bottom: 20px;
+    padding-left: 9%;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+.social a {
+    display: inline-block;
+    padding-right: 5px;
+    filter: invert(1);
+    transform: scale(.5);
+    transition: .5s;
+}
+.social a:hover {
+    transform: scale(.5) translateY(-15px);
+}
